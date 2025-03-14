@@ -1,0 +1,44 @@
+# Ignore Node.js dependencies
+/node_modules
+
+# Ignore build artifacts
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Ignore IDE-specific files
+.idea/
+.vscode/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Ignore Angular cache
+/.angular/cache
+
+# Ignore logs and debugging files
+npm-debug.log
+yarn-error.log
+testem.log
+libpeerconnection.log
+
+# Ignore coverage reports
+/coverage
+
+# Ignore environment-specific files
+.env
+.env.local
+.env.development
+.env.production
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore SQLite database file (if applicable)
+*.sqlite
+*.sqlite-journal
+
+# Ignore package-lock.json (optional, if you want to include it, remove this line)
+package-lock.json

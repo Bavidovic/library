@@ -1,0 +1,13 @@
+<!-- add-book.component.html -->
+<form (ngSubmit)="onSubmit()">
+    <div>
+      <label>Title: <input [(ngModel)]="book.title" name="title" required></label>
+    </div>
+    <div>
+      <label>Author: <input [(ngModel)]="book.author" name="author" required></label>
+    </div>
+    <div>
+      <label>Description: <textarea [(ngModel)]="book.description" name="description" required></textarea></label>
+    </div>
+    <button type="submit">Add Book</button>
+  </form>

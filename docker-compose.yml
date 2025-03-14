@@ -1,0 +1,30 @@
+version: '3'
+services:
+  backend:
+    build: ./library-backend
+    container_name: library-backend-1
+    ports:
+      - "3000:3000"
+    volumes:
+      - database-data:/app/data
+    environment:
+      - NODE_ENV=production
+    networks:
+      - library_default
+
+  frontend:
+    build: ./library-frontend
+    container_name: library-frontend-1
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
+    networks:
+      - library_default
+
+volumes:
+  database-data:
+
+networks:
+  library_default:
+    driver: bridge
